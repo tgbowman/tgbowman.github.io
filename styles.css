@@ -1,16 +1,38 @@
+nav {
+    background-color: #6DA1B3;
+    margin: -10;
+}
+
+
 nav ul{
     float: right;
     list-style: none;
+    margin-right: 10px;
 }
 
 nav li {
     float: left;
     margin-left: 15px;
+    color: white;
     
 }
 
+nav a:link {
+    color: white;
+}
+nav a:visited {
+    color: white;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+
+
+
 body {
-    background-color: #CEE9F2;
+    background-color: #D7F1FA;
 }
 
 .article {
