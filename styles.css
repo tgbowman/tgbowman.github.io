@@ -1,25 +1,33 @@
+/*********** Navigation Bar *************/
 nav {
-    background-color: #6DA1B3;
-    margin: -10;
+    background-color: #6DA1B3;   
 }
 
+ nav h1 {
+     float: left;
+     margin-left: 20px;
+     align: center;
+     color: white;
+ }
 
 nav ul{
     float: right;
     list-style: none;
     margin-right: 10px;
+    margin-top: 25px;
+    align: center;
 }
 
 nav li {
     float: left;
     margin-left: 15px;
-    color: white;
-    
+    color: white; 
 }
-
+/******** NAV LINK STYLING **************/
 nav a:link {
     color: white;
 }
+
 nav a:visited {
     color: white;
 }
@@ -28,8 +36,17 @@ nav a{
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #A1D490;
+    text-decoration: underline;
+}
 
-
+/****** MAIN BODY *******/
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
 body {
     background-color: #D7F1FA;
@@ -44,10 +61,27 @@ body {
     font-size: 3em;
 }
 
+.content {
+    min-height: 90%;
+    margin-bottom: -50px;
+}
 
+/*********** FOOTER ***************/
 
+.footer {
+    background-color: #6DA1B3;
+}
+.footer {
+    height: 50px;
+}
 
+.footer p {
+    color: white;
+    padding-top: 15px;
+    text-align: center;
+}
 
+/********* FLOAT CLEARFIX **************/
 .clearfix:after {
     content: "";
     display: table; 
