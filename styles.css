@@ -3,11 +3,11 @@ html {
 }
 
 /*********** Navigation Bar *************/
-nav {
-    background-color: #6DA1B3;   
+.subpage {
+    background-color: #003481;   
 }
 
- nav h1 {
+ .subpage h1 {
      float: left;
      margin-left: 20px;
      align: center;
@@ -15,7 +15,7 @@ nav {
      font-weight: 100;
  }
 
-nav ul{
+.subpage ul{
     float: right;
     list-style: none;
     margin-right: 15px;
@@ -23,13 +23,19 @@ nav ul{
     align: center;
 }
 
-nav li {
+.selected {
+    color: #BF765E;
+}
+
+.subpage li {
     float: left;
     margin-left: 15px;
     color: white; 
 }
+
+
 /******** NAV LINK STYLING **************/
-nav a:link {
+nav a {
     color: white;
 }
 
@@ -42,7 +48,7 @@ nav a{
 }
 
 nav a:hover {
-    color: #A1D490;
+    color: #74797A;;
     text-decoration: underline;
 }
 
@@ -54,12 +60,25 @@ body {
 }
 
 body {
-    background-color: #D7F1FA;
+    background-color: 	#1BA1F2;
 }
 
-.article {
-    border: 1px solid #ffdead;
-    color: goldenrod;
+.about {
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 10px 10px 5px #4D5052;
+   margin-top: 25px;
+   max-width: 80%;
+   margin-left: 250px;
+   margin-right: 25px;  
+    border-left: 6px solid #6DA1B3;
+}
+
+.about p {
+    color: #74797A;
+    padding: 5px 5px;
+    font-size: 1.5em;
+    text-align: justify;
 }
 
 #intro {
@@ -71,6 +90,36 @@ body {
     margin-bottom: -50px;
 }
 
+/************ HOME PAGE *****************/
+.homepage-nav {
+display: flex;
+min-height: 100vh;
+background-image: url("blue_background.jpg");
+justify-content: center;
+
+}
+
+.homepage-nav li {
+  
+}
+.homepage-nav ul {
+   display: inline-flex;
+
+}
+
+.homepage-nav h1 {
+    color: white;
+    border: 2px solid white;
+    width: 500px;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-hp {
+    margin-bottom: -50px;
+}
 .welcome {
     
     background-color: white;
@@ -98,6 +147,68 @@ body {
     padding-top: 5px;
     padding-bottom: 10px;
 }
+
+/************* ABOUT ME *******************/
+#profile-pic {
+    width: 200px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+    display: inline-block;
+    border-radius: 10px; 
+    box-shadow: 10px 10px 5px #4D5052;
+}
+/************ BLOG PAGE *******************/
+.blog-post {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #4D5052;
+    margin-top: 25px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;  
+    border-left: 6px solid #6DA1B3;
+    height: auto;
+}
+
+.blog-post h1,
+.blog-post p {
+    padding-left: 25px;
+}
+/************* CONTACT PAGE ****************/
+.contact {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #4D5052;
+    margin-top: 25px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;  
+    border-left: 6px solid #6DA1B3;
+    height: auto;
+}
+
+.contact h1 {
+    margin-left: 25px;
+}
+
+.contact ul{
+    list-style: none;
+}
+
+.contact li {
+    margin-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.contact li img {
+    display: inline-block;
+    float:left;
+    padding-right: 10px;
+}
 /*********** FOOTER ***************/
 
 .footer {
@@ -108,6 +219,16 @@ body {
 }
 
 .footer p {
+    color: white;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.footer-homepage {
+    background-color: black;
+}
+
+.footer-homepage p {
     color: white;
     padding-top: 15px;
     text-align: center;
