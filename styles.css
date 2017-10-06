@@ -21,13 +21,20 @@ html {
 }
 
 .white-bg h2,
+.white-bg h3,
 .white-bg p {
     margin-left: 60px;
 }
 
+.date {
+    text-align: right;
+    padding-right: 15px;
+}
+
 /*********** Subpage Navigation Bar *************/
 .subpage {
-    background-color: #003481;   
+    background-image: url("blue_background.jpg");   
+    box-shadow: 5px 5px 30px black 
 }
 
 .subpage h1 {
@@ -56,7 +63,6 @@ html {
     color: white; 
 }
 
-
 /******** NAV LINK STYLING **************/
 nav a {
     color: white;
@@ -83,7 +89,7 @@ body {
 }
 
 body {
-    background-color: 	#1BA1F2;
+    background-color:  #BABABA;
 }
 
 .about {
@@ -124,16 +130,19 @@ min-height: 100%;
 padding-top: 28%;
 }
 
-.homepage-nav a:hover {
-    border: 1px solid #74797A;
+#hp-ul li {
+    height: 75px;
+    width: 100px;
     border-style: border-box;
-    height: 100px;
+}
+
+#hp-ul a:hover {
+    color: #74797A;
+    border: 1px solid #74797A;
 }
 .homepage-nav li {
   display: inline-block;
   float: left;
-
-  
 
 }
 .homepage-nav ul {
@@ -170,21 +179,12 @@ padding-top: 28%;
     box-shadow: 10px 10px 5px #4D5052;
 }
 /************ BLOG PAGE *******************/
-
-
 .white-bg,
 .white-bg p {
     padding-left: 25px;
 }
 
-/************* PROJECTS PAGE ***************/
-.project h1 {
-    
-}
 /************* CONTACT PAGE ****************/
-
-
-
 .white-bg ul{
     list-style: none;
 }
@@ -202,7 +202,7 @@ padding-top: 28%;
 /*********** FOOTER ***************/
 
 .footer {
-    background-color: #6DA1B3;
+    background-image: url("blue_background.jpg");
 }
 .footer {
     height: 50px;
