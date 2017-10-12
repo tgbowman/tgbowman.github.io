@@ -24,6 +24,11 @@ html {
 .white-bg h3,
 .white-bg p {
     margin-left: 60px;
+    text-align: justify;
+}
+
+.white-bg p {
+    padding-right: 30px;
 }
 
 .date {
@@ -231,4 +236,5 @@ padding-top: 28%;
     clear: both; 
   }
 
+/************* MEDIA QUERYS ****************/
 
