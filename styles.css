@@ -132,10 +132,10 @@ min-height: 100%;
 
 .homepage-nav {
 
-padding-top: 28%;
+padding-top: 22%;
 }
 
-#hp-ul li {
+#hp-ul li a{
     height: 75px;
     width: 100px;
     border-style: border-box;

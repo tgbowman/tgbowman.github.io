@@ -1,0 +1,33 @@
+h1 {
+    font-size: 2em;
+}
+
+.resume {
+    background-color: rgba(211, 211, 211, .5);
+    margin-right: 25px;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    
+
+    
+   
+}
+.resume h3 {
+    margin-left: 80px;
+}
+.resume ul {
+    padding-left: 100px;
+}
+
+#workHist {
+    width: 90%;
+   
+
+}
+
+#education,
+#license {
+    width: 90%;
+  
+}
