@@ -1,4 +1,8 @@
-h1 {
+html {
+    min-height: 100%
+}
+
+.resume h1 {
     font-size: 2em;
 }
 
@@ -30,4 +34,10 @@ h1 {
 #license {
     width: 90%;
   
+}
+.content {
+    margin-bottom: 50px;
+}
+.footer {
+    height: 50px;
 }

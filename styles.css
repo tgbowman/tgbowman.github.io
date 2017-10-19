@@ -1,5 +1,16 @@
 html {
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Lato', sans-serif;
+    position: relative; 
+    min-height: 100%;
+}
+
+body {
+    
+    margin-bottom: 50px;
+}
+
+.content {
+    min-height: 100%;
 }
 
 /*********** STYLING *****************/
@@ -119,10 +130,7 @@ body {
     font-size: 3em;
 }
 
-.content {
-    min-height: 90%;
-    margin-bottom: -50px;
-}
+
 
 /************ HOME PAGE *****************/
 #hp-nav {
@@ -206,10 +214,14 @@ padding-top: 22%;
 }
 /*********** FOOTER ***************/
 
-.footer {
+
+.footer{
     background-image: url("blue_background.jpg");
+    width: 100%;
+    overflow:hidden;
 }
-.footer {
+.footer,
+.push {
     height: 50px;
 }
 
