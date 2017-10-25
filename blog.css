@@ -1,0 +1,20 @@
+#blogFormModal {
+    background-color: white;
+    box-shadow: 5px 5px 15px darkslategray;
+    padding: 15px;
+    margin-left: 30px;
+    margin-top: 30px;
+    max-width: 50%;
+    width: auto;
+    overflow: auto;
+}
+
+#createBlog {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#showBlogForm {
+    margin: 15px 0px 0px 15px;
+}
