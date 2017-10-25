@@ -53,13 +53,16 @@ function getStorage() {
 
 function printBlogs() {
     let blogOut = document.getElementById("blogs")
+     blogArchive.sort((p,n) => {
+         n.id - p.id 
+     })
      
         for (let i = 0; i < blogArchive.length; i++) {
         let blog = blogArchive[i];
         
         blogOut.innerHTML += 
             `
-            <article class="white-bg">
+            <article class="blog__article white-bg">
                 <h1>${blog.title}</h1>
                 <h2>by: ${blog.author}</h2>
                 <p>${blog.entry}</p>
@@ -103,6 +106,8 @@ function showForm() {
 function hideForm() {
     form.style.display="none"
 }
+
+
 
 
 showFormButton.addEventListener("click", showForm) || 
