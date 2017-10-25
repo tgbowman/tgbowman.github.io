@@ -8,10 +8,10 @@ function searchBlogs() {
    
    blogsToHide.forEach(article => article.classList.add("hidden"))
     
-   const blogsToSearch = blogsToHide.filter( function(blog){
+   const blogsToShow = blogsToHide.filter( function(blog){
        return blog.innerHTML.includes(userInput)})
        
-       blogsToSearch.forEach(article => article.classList.remove("hidden"))
+       blogsToShow.forEach(article => article.classList.remove("hidden"))
    }
 
 
