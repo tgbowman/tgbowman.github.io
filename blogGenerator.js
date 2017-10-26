@@ -110,7 +110,7 @@ function hideForm() {
 
 
 
-showFormButton.addEventListener("click", showForm) || 
+showFormButton.addEventListener("click", showForm) 
 blogCancelButton.addEventListener("click", hideForm)
 createBlogButton.addEventListener("click" , createNewBlog)
 
