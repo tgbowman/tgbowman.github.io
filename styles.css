@@ -9,6 +9,10 @@ body {
     margin-bottom: 50px;
 }
 
+.hidden {
+    display: none;
+}
+
 .content {
     min-height: 100%;
 }

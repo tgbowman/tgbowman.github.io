@@ -6,21 +6,23 @@ const form = document.getElementById("form")
 let blogArchive = JSON.parse(localStorage.getItem("BlogArchive")) || [];
 
 
-const blogIdGenerator = function*() {
-    let uniqueId = 1
-    while(true){
-        yield uniqueId
-        uniqueId++
+const idGenerator = function* (from) {
+    let id = 1
+    while (true) {
+        yield from + id
+        id++
     }
 }
+const lastId = blogArchive[blogArchive.length - 1] ||  {id: 0}
+const articleUUIDGen = idGenerator(lastId.id)
 
-const blogIdFactory = blogIdGenerator()
+
 
 function blogObjectFactory (title, author, entry, ...tags) {
     return Object.create(null, {
         "id": {
             enumerable: true,
-            value: blogIdFactory.next().value
+            value: articleUUIDGen.next().value
         },
         "title":{
             enumerable: true,
@@ -53,8 +55,8 @@ function getStorage() {
 
 function printBlogs() {
     let blogOut = document.getElementById("blogs")
-     blogArchive.sort((p,n) => {
-         n.id - p.id 
+     blogArchive.sort((p, n) => {
+         (n.id - p.id)
      })
      
         for (let i = 0; i < blogArchive.length; i++) {
@@ -110,8 +112,8 @@ function hideForm() {
 
 
 
-showFormButton.addEventListener("click", showForm) || 
+showFormButton.addEventListener("click", showForm) 
 blogCancelButton.addEventListener("click", hideForm)
 createBlogButton.addEventListener("click" , createNewBlog)
 
-getStorage()
+
