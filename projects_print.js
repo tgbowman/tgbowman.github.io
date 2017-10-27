@@ -5,7 +5,7 @@ for (let i = 0; i < storedProjects.length; i++) {
     
     projectOut.innerHTML += 
         `
-        <article class="white-bg">
+        <article class="project__entry white-bg">
             <h1>${project.title}</h1>
             <h2>Description</h2>
             <p>${project.Description}</p>
