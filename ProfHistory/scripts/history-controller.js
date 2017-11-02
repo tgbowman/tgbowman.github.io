@@ -4,8 +4,8 @@ let educationOut = document.getElementById("education")
 let licenseOut = document.getElementById("license")
 
 
-for (let i = 0; i < getHistory[0].length; i++) {
-    let job = getHistory[0][i];
+getHistory[0].forEach(function(job) {
+    
 
     workOut.innerHTML += 
     `
@@ -24,10 +24,9 @@ for (let i = 0; i < getHistory[0].length; i++) {
     </section>
 
     `
-}
+})
 
-for (let i = 0; i < getHistory[1].length; i++) {
-    let education = getHistory[1][i];
+getHistory[1].forEach(function(education) {
 
     educationOut.innerHTML += 
     `
@@ -40,10 +39,9 @@ for (let i = 0; i < getHistory[1].length; i++) {
 
     `
 
-}
+})
 
-for (let i = 0; i < getHistory[2].length; i++) {
-    let license = getHistory[2][i];
+getHistory[2].forEach(function(license) {
 
     licenseOut.innerHTML +=
     `
@@ -54,4 +52,4 @@ for (let i = 0; i < getHistory[2].length; i++) {
 
     `
 
-}
+})

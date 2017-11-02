@@ -1,7 +1,7 @@
 projectOut = document.getElementsByClassName("projects")[0];
 
-for (let i = 0; i < storedProjects.length; i++) {
-    let project = storedProjects[i];
+storedProjects.forEach(function(project) {
+    
     
     projectOut.innerHTML += 
         `
@@ -15,4 +15,4 @@ for (let i = 0; i < storedProjects.length; i++) {
 
         `
     
-}
+})

@@ -22,3 +22,21 @@
 #blogSearch {
     margin: 15px 0px 0px 25px;
 }
+
+#pageButtons {
+    width: 30%;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+#blogEdit {
+    display: block;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#blogEdit article {
+    margin-bottom: 10px;
+}

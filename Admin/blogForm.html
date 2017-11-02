@@ -2,7 +2,7 @@
     <head>
         <title>Blog</title>
         <link href="../styles.css" rel="stylesheet">
-        <link href="../blog.css" rel="stylesheet">
+        <link href="../Blog/styles/blog.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         
     </head>
@@ -24,16 +24,19 @@
                         <h1>Create a Blog Article</h1>
                         <h2>Title:</h2>
                         <input id="blogTitle" type = "text">
-                        <h2>Author</h2>
+                        <h2>Author:</h2>
                         <input id = "blogAuthor" type = "text">
-                        <h2>Entry</h2>
+                        <h2>Entry:</h2>
                         <textarea id="blogEntry" rows="4" cols="50">
 
                         </textarea>
-                        <h2>Tags</h2>
+                        <h2>Tags:</h2>
                         <input id = "blogTags" type="text">
                         <button id="createBlog">Create</button>
                         <button id="cancelForm" type="button">Cancel</button>
+
+                    </div>
+                    <div id="blogEdit">
 
                     </div>
                     <div id= "blogs">
@@ -49,8 +52,8 @@
                      <p>Tyler Bowman &copy 2017</p>
              
                  </footer>
-                 <script src="../blogGenerator.js"></script>
-                 <script src="../blog_print.js"></script>
-                 <script src="../blog_data.js"></script>
+                 <script src="../Blog/scripts/blogGenerator.js"></script>
+                 <script src="../Blog/scripts/blog_print.js"></script>
+                 <script src="../Blog/scripts/blog_data.js"></script>
              </body>
 </html>
