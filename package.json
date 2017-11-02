@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/tgbowman/tgbowman.github.io/issues"
   },
-  "homepage": "https://github.com/tgbowman/tgbowman.github.io#readme"
+  "homepage": "https://github.com/tgbowman/tgbowman.github.io#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "grunt-contrib-watch": "^1.0.0"
+  }
 }
