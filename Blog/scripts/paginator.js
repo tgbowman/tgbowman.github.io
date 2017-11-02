@@ -26,7 +26,7 @@ let nextPage = document.getElementById("next")
 function paginate(event) {
     let start
     if(event.type === "click"){
-         start = parseInt(event.target.id)
+        start = parseInt(event.target.id)
     } else {
         start = event
     }
@@ -35,14 +35,14 @@ function paginate(event) {
     allBlogs.forEach(
         function(blog) {
             if(blog.classList.contains("hidden") === false)
-                {blog.classList.add("hidden")}
+            {blog.classList.add("hidden")}
         }
     )
     
     for (let i = start; i < (start + (blogsPerPage)) ; i++) {
         let blog = allBlogs[i];
         if(blog){
-        blog.classList.toggle("hidden")
+            blog.classList.toggle("hidden")
         }
     }
     

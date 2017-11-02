@@ -5,7 +5,7 @@ const form = document.getElementById("form")
 let editMode = false
 let currentArticle = null
 
-let blogArchive = JSON.parse(localStorage.getItem("BlogArchive")) || [];
+let blogArchive = JSON.parse(localStorage.getItem("BlogArchive")) || []
 
 
 const idGenerator = function* (from) {
@@ -47,17 +47,17 @@ function blogObjectFactory (title, author, entry, id, ...tags) {
 }
 function getStorage() {
     if(blogArchive.length > 0){blogArchive = JSON.parse(localStorage.getItem("BlogArchive"))
-    printBlogs()}
+        printBlogs()}
 }
 
 
 function printBlogs() {
     let blogOut = document.getElementById("blogs")
-     blogArchive.sort((p, n) => {
-         return (n.id - p.id)
-     })
+    blogArchive.sort((p, n) => {
+        return (n.id - p.id)
+    })
      
-        blogArchive.forEach(function(blog) {
+    blogArchive.forEach(function(blog) {
             
         
         blogOut.innerHTML += 
@@ -76,7 +76,7 @@ function printBlogs() {
 
 
 function setStorage(){
-    const BlogArchiveString = JSON.stringify(blogArchive);
+    const BlogArchiveString = JSON.stringify(blogArchive)
     localStorage.setItem("BlogArchive", BlogArchiveString)
     
    
@@ -108,15 +108,15 @@ document.getElementById("blogEdit").addEventListener("click", e => {
             blog => blog.id === parseInt(e.target.id.split("-")[1])
         )}
 
-        document.getElementById("blogTitle").value = currentArticle.title
-        document.getElementById("blogAuthor").value = currentArticle.author 
-        document.getElementById("blogEntry").value = currentArticle.entry
-        document.getElementById("blogTags").value = currentArticle.tags 
+    document.getElementById("blogTitle").value = currentArticle.title
+    document.getElementById("blogAuthor").value = currentArticle.author 
+    document.getElementById("blogEntry").value = currentArticle.entry
+    document.getElementById("blogTags").value = currentArticle.tags 
         
 
-        editMode = true
+    editMode = true
     
-    })
+})
 
 function createNewBlog(){
 
@@ -136,8 +136,8 @@ function createNewBlog(){
         editMode = false
 
     } else {
-    let newBlog = blogObjectFactory(blogTitle, blogAuthor, blogEntry, blogId, blogTags)
-    blogArchive.push(newBlog)
+        let newBlog = blogObjectFactory(blogTitle, blogAuthor, blogEntry, blogId, blogTags)
+        blogArchive.push(newBlog)
     }
     listArticleTitles()
     setStorage()

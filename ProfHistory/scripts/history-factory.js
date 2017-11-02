@@ -14,7 +14,7 @@ let  job1 = {
     "supervisor" : "Gail Merritt"
 }
 
- let  job2 = {
+let  job2 = {
     "job" : "Student Teacher",
     "location" : "Independence High School",
     "start" : "March, 2011",
@@ -34,7 +34,7 @@ let  job3 = {
     "supervisor" : "Fred Campbell"
 }
 
-jobList.push(job1, job2, job3);
+jobList.push(job1, job2, job3)
 
 //Education info
 let education1 = {
