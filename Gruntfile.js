@@ -12,6 +12,20 @@ module.exports = function(grunt) {
                 },
             }
         },
+        browserify: {
+            options: {
+                browserifyOptions: {
+                    debug: true
+                }
+            },
+            dist: {
+                files: {
+                    "build/bundle.js": ["scripts/main.js"],
+                    
+                },
+            },
+        },
+       
         uglify: {
             options: {
                 banner: "/*! <%= pkg.name %> <%= grunt.template.today(\"yyyy-mm-dd\") %> */\n"
@@ -69,12 +83,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify")
     grunt.loadNpmTasks("grunt-contrib-watch")
     grunt.loadNpmTasks("gruntify-eslint")
+    grunt.loadNpmTasks("grunt-browserfy")
        
         
         
         
     
     // Default task(s).
-    grunt.registerTask("default", ["uglify", "watch", "eslint"])
+    grunt.registerTask("default", ["eslint","browserify", "watch",])
     
 }
