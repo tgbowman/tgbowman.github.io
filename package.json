@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/tgbowman/tgbowman.github.io#readme",
   "devDependencies": {
+    "browserify": "^14.5.0",
     "eslint-grunt": "^1.0.0",
     "grunt": "^1.0.1",
     "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
