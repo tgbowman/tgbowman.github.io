@@ -1,0 +1,35 @@
+{
+  "name": "tgbowman.github.io",
+  "version": "1.0.0",
+  "description": "Tyler Bowman's personal site for NSS Cohort 22.",
+  "main": "styles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgbowman/tgbowman.github.io.git"
+  },
+  "keywords": [
+    "nss",
+    "personal",
+    "site",
+    "tyler",
+    "bowman"
+  ],
+  "author": "Tyler Bowman <bowmant388@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tgbowman/tgbowman.github.io/issues"
+  },
+  "homepage": "https://github.com/tgbowman/tgbowman.github.io#readme",
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "eslint-grunt": "^1.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "gruntify-eslint": "^4.0.0"
+  }
+}

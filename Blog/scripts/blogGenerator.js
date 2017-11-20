@@ -2,6 +2,8 @@ const createBlogButton = document.getElementById("createBlog")
 const blogCancelButton = document.getElementById("cancelForm")
 const showFormButton = document.getElementById("showBlogForm")
 const form = document.getElementById("form")
+let editMode = false
+let currentArticle = null
 
 let blogArchive = JSON.parse(localStorage.getItem("BlogArchive")) || []
 
@@ -18,11 +20,11 @@ const articleUUIDGen = idGenerator(lastId.id)
 
 
 
-function blogObjectFactory (title, author, entry, ...tags) {
+function blogObjectFactory (title, author, entry, id, ...tags) {
     return Object.create(null, {
         "id": {
             enumerable: true,
-            value: articleUUIDGen.next().value
+            value:  (id===null) ? articleUUIDGen.next().value : id 
         },
         "title":{
             enumerable: true,
@@ -35,10 +37,6 @@ function blogObjectFactory (title, author, entry, ...tags) {
         "entry": {
             enumerable: true,
             value: entry
-        },
-        "tags": {
-            enumerable: true,
-            value: tags
         },
         "published": {
             enumerable: true,
@@ -56,15 +54,15 @@ function getStorage() {
 function printBlogs() {
     let blogOut = document.getElementById("blogs")
     blogArchive.sort((p, n) => {
-        (n.id - p.id)
+        return (n.id - p.id)
     })
      
-    for (let i = 0; i < blogArchive.length; i++) {
-        let blog = blogArchive[i]
+    blogArchive.forEach(function(blog) {
+            
         
         blogOut.innerHTML += 
             `
-            <article class="blog__article white-bg">
+            <article class="blog__article white-bg hidden">
                 <h1>${blog.title}</h1>
                 <h2>by: ${blog.author}</h2>
                 <p>${blog.entry}</p>
@@ -72,7 +70,7 @@ function printBlogs() {
     
             `
         
-    }
+    })
 }
 
 
@@ -87,6 +85,39 @@ function setStorage(){
   
 }
 
+const listArticleTitles = () => {
+    let blogEditOut = document.getElementById("blogEdit")
+    let titleList = ""
+    blogArchive.forEach(
+        blog => {
+            titleList += 
+            `
+            <article id=${blog.id}>
+            <span class="${blog.title}">${blog.title}</span>
+            <button id="editArticle-${blog.id}">Edit</button>
+            </article>
+            `
+        }
+    )
+    blogEditOut.innerHTML = titleList
+}
+
+document.getElementById("blogEdit").addEventListener("click", e => {
+    if(e.target.id.startsWith("editArticle-")){
+        currentArticle = blogArchive.find(
+            blog => blog.id === parseInt(e.target.id.split("-")[1])
+        )}
+
+    document.getElementById("blogTitle").value = currentArticle.title
+    document.getElementById("blogAuthor").value = currentArticle.author 
+    document.getElementById("blogEntry").value = currentArticle.entry
+    document.getElementById("blogTags").value = currentArticle.tags 
+        
+
+    editMode = true
+    
+})
+
 function createNewBlog(){
 
     let blogTitle = document.getElementById("blogTitle").value
@@ -94,11 +125,23 @@ function createNewBlog(){
     let blogEntry = document.getElementById("blogEntry").value 
     let blogTags = document.getElementById("blogTags").value
 
-    let newBlog = blogObjectFactory(blogTitle, blogAuthor, blogEntry, blogTags)
+    
+    if(editMode){
+        const articleIndex = blogArchive.findIndex(
+            blog => blog.id === currentArticle.id
+        )
 
-    blogArchive.push(newBlog)
+        blogArchive[articleIndex] = blogObjectFactory(blogTitle, blogAuthor, blogEntry, currentArticle.id, blogTags)
+
+        editMode = false
+
+    } else {
+        let newBlog = blogObjectFactory(blogTitle, blogAuthor, blogEntry, blogId, blogTags)
+        blogArchive.push(newBlog)
+    }
+    listArticleTitles()
     setStorage()
-  
+    
 }
 
 function showForm() {
@@ -109,6 +152,7 @@ function hideForm() {
     form.style.display="none"
 }
 
+listArticleTitles()
 
 
 

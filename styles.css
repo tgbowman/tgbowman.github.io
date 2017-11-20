@@ -53,7 +53,7 @@ body {
 
 /*********** Subpage Navigation Bar *************/
 .subpage {
-    background-image: url("blue_background.jpg");   
+    background-image: url("/img/blue_background.jpg");   
     box-shadow: 5px 5px 30px black 
 }
 
@@ -138,7 +138,7 @@ body {
 
 /************ HOME PAGE *****************/
 #hp-nav {
-background-image: url("blue_background.jpg");
+background-image: url("img/blue_background.jpg");
 min-height: 100%;
 }
 
@@ -220,7 +220,7 @@ padding-top: 22%;
 
 
 .footer{
-    background-image: url("blue_background.jpg");
+    background-image: url("img/blue_background.jpg");
     width: 100%;
     overflow:hidden;
 }
